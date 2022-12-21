@@ -99,7 +99,7 @@ current.time = Sys.time()
 json.lines = ""
 for (article in top.articles){
   record = list(
-    title = article$article,
+    article = article$article,
     views = article$views,
     rank = article$rank,
     date = format(date, "%Y-%m-%d"),
