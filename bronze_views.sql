@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE
 tokmaktunay_homework.bronze_views (
-    title STRING,
-    edits INT,
+    article STRING,
+    views INT,
     rank INT,
     date DATE,
     retrieved_at TIMESTAMP) 
