@@ -1,7 +1,7 @@
 CREATE EXTERNAL TABLE
-tunay.bronze_edits (
-    title STRING,
-    edits INT,
+tunay.silver_views (
+    article STRING,
+    views INT,
     rank INT,
     date DATE,
     retrieved_at TIMESTAMP) 
