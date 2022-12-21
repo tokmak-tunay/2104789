@@ -1,10 +1,8 @@
-CREATE EXTERNAL TABLE
-tunay.silver_views (
-    article STRING,
-    views INT,
-    rank INT,
-    date DATE,
-    retrieved_at TIMESTAMP) 
-ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-LOCATION 's3://tokmak.tunay/datalake/views/';
- 
+CREATE TABLE tokmaktunay_homework.silver_views
+    WITH (
+          format = 'PARQUET',
+          parquet_compression = 'SNAPPY',
+          external_location = 's3://tokmak.tunay/datalake/views_silver/'
+    ) AS SELECT article,views,rank, date
+         FROM tokmaktunay_homework.bronze_views;
+         
