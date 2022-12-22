@@ -6,7 +6,7 @@ CREATE TABLE tokmaktunay_homework.gold_allviews
     ) AS SELECT
     article,
     sum(views) as total_top_view,
-    max(rank) as top_rank,
+    min(rank) as top_rank,
     count(date) as   ranked_days
          FROM tokmaktunay_homework.silver_views 
          GROUP BY article
